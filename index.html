@@ -1,103 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Jona</title>
+  <head>
+    <!-- ...existing head code... -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jona's Profile</title>
     <style>
-        :root {
-            --bg-color: #1a1b1e;
-            --text-color: #e4e4e4;
-            --accent-color: #64ffda;
-            --link-color: #88ccff;
-            --container-bg: #2d2e33;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-        }
-
-        .container {
-            background-color: var(--container-bg);
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-        }
-
-        h1 {
-            color: var(--accent-color);
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 10px;
-        }
-
-        .info-item {
-            margin: 20px 0;
-            display: flex;
-            align-items: start;
-            gap: 15px;
-            transition: transform 0.2s;
-        }
-
-        .info-item:hover {
-            transform: translateX(5px);
-        }
-
-        .emoji {
-            font-size: 1.5em;
-            min-width: 40px;
-        }
-
-        a {
-            color: var(--link-color);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        a:hover {
-            color: var(--accent-color);
-            text-decoration: underline;
-        }
+      /* Dark theme styling */
+      body {
+        background-color: #121212;
+        color: #e0e0e0;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+      }
+      h1, h2 {
+        color: #bb86fc;
+      }
+      a {
+        color: #03dac6;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        padding: 5px 0;
+      }
     </style>
-</head>
-<body>
-    <div class="container">
-        <h1>About Me</h1>
-
-        <div class="info-item">
-            <span class="emoji">👋</span>
-            <p>Hi, I'm <strong>Jona</strong></p>
-        </div>
-
-        <div class="info-item">
-            <span class="emoji">👀</span>
-            <p>I'm interested in learning to code small applications that help automate repetitive or simple tasks for work</p>
-        </div>
-
-        <div class="info-item">
-            <span class="emoji">🌱</span>
-            <p>I'm currently learning Python</p>
-        </div>
-
-        <div class="info-item">
-            <span class="emoji">💞️</span>
-            <p>I'm looking to collaborate on any Python related job</p>
-        </div>
-
-        <div class="info-item">
-            <span class="emoji">📫</span>
-            <p>How to reach me: <a href="https://www.linkedin.com/in/jona-wysolmierski-520b5b291/">LinkedIn</a></p>
-        </div>
-
-        <div class="info-item">
-            <span class="emoji">⚡</span>
-            <p>Fun fact: Love reading about investing, philosophy and history</p>
-        </div>
-    </div>
-</body>
+  </head>
+  <body>
+    <!-- ...existing body code... -->
+    <h1>Jona</h1>
+    <h2>Interests</h2>
+    <ul>
+      <li>Python</li>
+      <li>AI</li>
+      <li>History</li>
+      <li>Environmental Engineering</li>
+      <li>Investing</li>
+    </ul>
+    <p>
+      <a href="https://www.linkedin.com/in/jona-wysolmierski-520b5b291/" target="_blank">LinkedIn</a>
+      |
+      <a href="https://github.com/JonaWy" target="_blank">GitHub</a>
+    </p>
+  </body>
 </html>
