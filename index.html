@@ -94,20 +94,6 @@
         </div>
 
         <div class="info-item">
-            <span class="emoji">👀</span>
-            <p>I'm interested in learning to code small applications that help automate repetitive or simple tasks for work</p>
-        </div>
-
-        <div class="info-item">
-            <span class="emoji">🌱</span>
-            <p>I'm currently learning Python</p>
-        </div>
-
-        <div class="info-item">
-            <span class="emoji">💞️</span>
-            <p>I'm looking to collaborate on any Python related job</p>
-        </div>
-
         <div class="info-item">
             <span class="emoji">📫</span>
             <p>How to reach me: <a href="https://www.linkedin.com/in/jona-wysolmierski-520b5b291/">LinkedIn</a></p>
@@ -118,37 +104,5 @@
             <p>Fun fact: Love reading about investing, philosophy and history</p>
         </div>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const container = document.querySelector('.container');
-            const infoItems = document.querySelectorAll('.info-item');
-            
-            function checkScroll() {
-                const containerRect = container.getBoundingClientRect();
-                const containerCenter = containerRect.top + containerRect.height / 2;
-
-                infoItems.forEach(item => {
-                    const itemRect = item.getBoundingClientRect();
-                    const itemCenter = itemRect.top + itemRect.height / 2;
-                    
-                    // Calculate distance from center
-                    const distance = Math.abs(containerCenter - itemCenter);
-                    
-                    if (distance < item.offsetHeight) {
-                        item.classList.add('active');
-                    } else {
-                        item.classList.remove('active');
-                    }
-                });
-            }
-
-            // Initial check
-            checkScroll();
-            
-            // Add scroll event listener
-            container.addEventListener('scroll', checkScroll);
-        });
-    </script>
 </body>
 </html>
