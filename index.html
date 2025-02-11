@@ -46,13 +46,34 @@
       }
 
       .interests {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
         gap: 1.5rem;
         margin: 2rem 0;
+        padding: 1rem 0;
+        scrollbar-width: thin;
+        scrollbar-color: var(--accent) var(--card-bg);
+      }
+
+      /* Custom scrollbar styling */
+      .interests::-webkit-scrollbar {
+        height: 6px;
+      }
+
+      .interests::-webkit-scrollbar-track {
+        background: var(--card-bg);
+        border-radius: 3px;
+      }
+
+      .interests::-webkit-scrollbar-thumb {
+        background: var(--accent);
+        border-radius: 3px;
       }
 
       .interest-card {
+        flex: 0 0 auto;
+        min-width: 200px;
         background: var(--card-bg);
         padding: 1.5rem;
         border-radius: 10px;
