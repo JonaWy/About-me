@@ -1,124 +1,99 @@
-import tkinter as tk
-from tkinter import messagebox, ttk
-from datetime import datetime, timedelta
-from tkcalendar import Calendar
+me.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Jona</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
 
-class DeathTimer:
-    def __init__(self, root):
-        self.root = root
-        self.root.title("Life Journey Calculator")
-        self.root.geometry("500x800")
-        self.root.configure(bg="#f0f0f0")
-        
-        # Style configuration
-        self.style = ttk.Style()
-        self.style.configure("Custom.TFrame", background="#f0f0f0")
-        self.style.configure("Custom.TButton",
-                           font=("Helvetica", 12),
-                           padding=10)
-        
-        # Main container
-        main_container = ttk.Frame(root, style="Custom.TFrame", padding="20")
-        main_container.pack(fill="both", expand=True)
-        
-        # Title
-        title_label = tk.Label(main_container,
-                             text="Life Journey Calculator",
-                             font=("Helvetica", 24, "bold"),
-                             bg="#f0f0f0",
-                             fg="#2c3e50",
-                             pady=20)
-        title_label.pack()
-        
-        # Input frame with shadow effect
-        self.input_frame = tk.Frame(main_container,
-                                  bg="white",
-                                  relief="solid",
-                                  bd=1,
-                                  padx=20,
-                                  pady=20)
-        self.input_frame.pack(fill="x", padx=20, pady=10)
-        
-        # Birthday selection
-        tk.Label(self.input_frame,
-                text="Wählen Sie Ihr Geburtsdatum:",
-                font=("Helvetica", 12),
-                bg="white",
-                fg="#2c3e50").pack(pady=(0,5))
-                
-        self.cal = Calendar(self.input_frame,
-                          selectmode='day',
-                          year=2000,
-                          month=1,
-                          day=1,
-                          background="#3498db",
-                          foreground="white",
-                          selectbackground="#2980b9")
-        self.cal.pack(pady=10)
-        
-        # Life expectancy input
-        tk.Label(self.input_frame,
-                text="Erwartete Lebensdauer:",
-                font=("Helvetica", 12),
-                bg="white",
-                fg="#2c3e50").pack(pady=(10,5))
-                
-        self.life_expectancy = ttk.Entry(self.input_frame,
-                                       font=("Helvetica", 12),
-                                       width=10,
-                                       justify="center")
-        self.life_expectancy.pack(pady=5)
-        
-        # Calculate button
-        calculate_btn = tk.Button(self.input_frame,
-                                text="Berechnen",
-                                command=self.calculate,
-                                font=("Helvetica", 12, "bold"),
-                                bg="#3498db",
-                                fg="white",
-                                activebackground="#2980b9",
-                                activeforeground="white",
-                                relief="flat",
-                                padx=30,
-                                pady=10,
-                                cursor="hand2")
-        calculate_btn.pack(pady=20)
-        
-        # Results frame
-        self.result_frame = tk.Frame(main_container,
-                                   bg="white",
-                                   relief="solid",
-                                   bd=1,
-                                   padx=20,
-                                   pady=20)
-        self.result_frame.pack(fill="x", padx=20, pady=10)
-        
-        # Results labels with improved styling
-        self.age_label = tk.Label(self.result_frame,
-                                text="",
-                                font=("Helvetica", 12),
-                                bg="white",
-                                fg="#2c3e50")
-        self.age_label.pack(pady=5)
-        
-        self.end_date_label = tk.Label(self.result_frame,
-                                     text="",
-                                     font=("Helvetica", 12),
-                                     bg="white",
-                                     fg="#2c3e50")
-        self.end_date_label.pack(pady=5)
-        
-        self.weekends_label = tk.Label(self.result_frame,
-                                     text="",
-                                     font=("Helvetica", 12, "bold"),
-                                     bg="white",
-                                     fg="#e74c3c")
-        self.weekends_label.pack(pady=5)
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
 
-    def calculate(self):
-        # ... existing calculation code ...
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
 
-if __name__ == "__main__":
-    root = tk.Tk()
-    app = DeathTimer(root)
-    root.mainloop()
+        .info-item {
+            margin: 20px 0;
+            display: flex;
+            align-items: start;
+            gap: 15px;
+        }
+
+        .emoji {
+            font-size: 1.5em;
+            min-width: 40px;
+        }
+
+        .linkedin-button {
+            display: inline-block;
+            background-color: #0077b5;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .linkedin-button:hover {
+            background-color: #005885;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About Me</h1>
+
+        <div class="info-item">
+            <span class="emoji">👋</span>
+            <p>Hi, I'm <strong>Jona</strong></p>
+        </div>
+
+        <div class="info-item">
+            <span class="emoji">👀</span>
+            <p>I'm interested in learning to code small applications that help automate repetitive or simple tasks for work</p>
+        </div>
+
+        <div class="info-item">
+            <span class="emoji">🌱</span>
+            <p>I'm currently learning Python</p>
+        </div>
+
+        <div class="info-item">
+            <span class="emoji">💞️</span>
+            <p>I'm looking to collaborate on any Python related job</p>
+        </div>
+
+        <div class="info-item">
+            <span class="emoji">📫</span>
+            <p>How to reach me: 
+                <a href="https://linkedin.com/in/YOUR-PROFILE" class="linkedin-button">
+                    Connect on LinkedIn
+                </a>
+            </p>
+        </div>
+
+        <div class="info-item">
+            <span class="emoji">⚡</span>
+            <p>Fun fact: Love reading about investing, philosophy and history</p>
+        </div>
+    </div>
+</body>
+</html>
